@@ -97,6 +97,7 @@
 }
 
 .blog-img{
+    padding: 10px;
     display: block;
     margin: 0 auto;
     max-width: 250px;
