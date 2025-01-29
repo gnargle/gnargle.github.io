@@ -117,11 +117,18 @@
     width: 48px;
 }
 
-.blog-img{
+.blog-img {
     padding: 10px;
     display: block;
     margin: 0 auto;
     max-width: 250px;
+}
+
+.blog-img-lrg {
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 body{
