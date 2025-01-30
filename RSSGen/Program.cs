@@ -58,7 +58,8 @@ foreach (var file in fileInfos)
     if (file.FullName.Contains("entries"))
     {
         item.link = "https://athene.gay/entries/" + Path.GetFileName(file.Name);
-    } else if (file.FullName.Contains("projects"))
+    }
+    else if (file.FullName.Contains("projects"))
     {
         item.link = "https://athene.gay/projects/" + Path.GetFileName(file.Name);
     }
@@ -69,8 +70,12 @@ var output = Generator.SerializeRSS(myRSS);
 
 var rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../../../../feed.rss");
 
-if (File.Exists(rssPath)) {
+if (File.Exists(rssPath))
+{
     File.Delete(rssPath);
 }
+
+Console.WriteLine("RSS generated, outputting to console and file");
+Console.WriteLine(output);
 
 File.WriteAllText(rssPath, output);
