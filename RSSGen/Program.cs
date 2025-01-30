@@ -45,7 +45,13 @@ myRSS.channel = new rssChannel
     description = "blog entries for athene.gay",
     language = "en-GB",
     link = "https://athene.gay",
-    item = new List<rssChannelItem>()
+    item = new List<rssChannelItem>(),
+    link1 = new link
+    {
+        href = "https://athene.gay/feed.xml",
+        rel="self",
+        type = "application/rss+xml",
+    }
 };
 
 foreach (var file in fileInfos)
@@ -53,7 +59,7 @@ foreach (var file in fileInfos)
     var item = new rssChannelItem()
     {
         title = Path.GetFileNameWithoutExtension(file.Name),
-        pubDate = file.CreationTimeUtc.ToString(),
+        pubDate = file.CreationTimeUtc.ToString("r"),
     };
     if (file.FullName.Contains("entries"))
     {
@@ -63,6 +69,11 @@ foreach (var file in fileInfos)
     {
         item.link = "https://athene.gay/projects/" + Path.GetFileName(file.Name);
     }
+    item.guid = new rssChannelItemGuid()
+    {
+        isPermaLink = true,
+        Value = item.link
+    };
     myRSS.channel.item.Add(item);
 }
 

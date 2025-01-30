@@ -5,30 +5,36 @@
     <description>blog entries for athene.gay</description>
     <link>https://athene.gay</link>
     <language>en-GB</language>
+    <link href="https://athene.gay/feed.xml" rel="self" type="application/rss+xml" xmlns="http://www.w3.org/2005/Atom" />
     <item>
       <title>thiswebsite</title>
-      <pubDate>29/01/2025 10:02:13</pubDate>
+      <pubDate>Wed, 29 Jan 2025 10:02:13 GMT</pubDate>
       <link>https://athene.gay/projects/thiswebsite.html</link>
+      <guid isPermaLink="true">https://athene.gay/projects/thiswebsite.html</guid>
     </item>
     <item>
       <title>youbeat</title>
-      <pubDate>26/01/2025 18:30:27</pubDate>
+      <pubDate>Sun, 26 Jan 2025 18:30:27 GMT</pubDate>
       <link>https://athene.gay/projects/youbeat.html</link>
+      <guid isPermaLink="true">https://athene.gay/projects/youbeat.html</guid>
     </item>
     <item>
       <title>miku</title>
-      <pubDate>26/01/2025 18:30:03</pubDate>
+      <pubDate>Sun, 26 Jan 2025 18:30:03 GMT</pubDate>
       <link>https://athene.gay/entries/miku.html</link>
+      <guid isPermaLink="true">https://athene.gay/entries/miku.html</guid>
     </item>
     <item>
       <title>dalamudplugins</title>
-      <pubDate>25/01/2025 21:47:06</pubDate>
+      <pubDate>Sat, 25 Jan 2025 21:47:06 GMT</pubDate>
       <link>https://athene.gay/projects/dalamudplugins.html</link>
+      <guid isPermaLink="true">https://athene.gay/projects/dalamudplugins.html</guid>
     </item>
     <item>
       <title>1</title>
-      <pubDate>25/01/2025 21:47:06</pubDate>
+      <pubDate>Sat, 25 Jan 2025 21:47:06 GMT</pubDate>
       <link>https://athene.gay/entries/1.html</link>
+      <guid isPermaLink="true">https://athene.gay/entries/1.html</guid>
     </item>
   </channel>
 </rss>
