@@ -17,3 +17,6 @@ _site/
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
 /RSSGen/.vs/RSSGen
+RSSGen/.vs/ProjectEvaluation/rssgen.metadata.v9.bin
+RSSGen/.vs/ProjectEvaluation/rssgen.projects.v9.bin
+RSSGen/.vs/ProjectEvaluation/rssgen.strings.v9.bin
