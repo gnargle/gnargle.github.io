@@ -68,7 +68,7 @@ foreach (var file in fileInfos)
 
 var output = Generator.SerializeRSS(myRSS);
 
-var rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../../../../feed.rss");
+var rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../../../../feed.xml");
 
 if (File.Exists(rssPath))
 {
