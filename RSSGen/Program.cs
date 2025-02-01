@@ -2,11 +2,22 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 
 // See https://aka.ms/new-console-template for more information
 Console.WriteLine("Scanning entries folder for latest files");
 
-var filePaths = Directory.EnumerateFiles(Path.Combine(Directory.GetCurrentDirectory(), "../../../../entries"));
+var folder = String.Empty;
+
+if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+{
+    folder = Path.Combine(Directory.GetCurrentDirectory(), "../entries");
+}
+else
+{
+    folder = Path.Combine(Directory.GetCurrentDirectory(), "../../../../entries");
+}
+var filePaths = Directory.EnumerateFiles(folder);
 var fileInfos = new List<FileInfo>();
 
 if (filePaths.Any())
@@ -22,7 +33,16 @@ if (filePaths.Any())
 
 Console.WriteLine("Scanning projects folder for latest files");
 
-filePaths = Directory.EnumerateFiles(Path.Combine(Directory.GetCurrentDirectory(), "../../../../projects"));
+if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+{
+    folder = Path.Combine(Directory.GetCurrentDirectory(), "../projects");
+}
+else
+{
+    folder = Path.Combine(Directory.GetCurrentDirectory(), "../../../../projects");
+}
+
+filePaths = Directory.EnumerateFiles(folder);
 
 if (filePaths.Any())
 {
@@ -49,7 +69,7 @@ myRSS.channel = new rssChannel
     link1 = new link
     {
         href = "https://athene.gay/feed.xml",
-        rel="self",
+        rel = "self",
         type = "application/rss+xml",
     }
 };
