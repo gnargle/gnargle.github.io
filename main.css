@@ -136,6 +136,8 @@
     max-height:378px;
     display: block;
     margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 body{
