@@ -134,6 +134,7 @@
 .video-embed{
     width: 768px;
     height:432px;
+    margin: 0 auto;
 }
 
 body{
