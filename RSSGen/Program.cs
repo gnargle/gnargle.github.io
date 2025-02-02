@@ -99,7 +99,16 @@ foreach (var file in fileInfos)
 
 var output = Generator.SerializeRSS(myRSS);
 
-var rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../../../../feed.xml");
+var rssPath = String.Empty;
+
+if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+{
+    rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../feed.xml");
+}
+else
+{
+    rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../../../../feed.xml");
+}
 
 if (File.Exists(rssPath))
 {
