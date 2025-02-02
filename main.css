@@ -132,8 +132,9 @@
 }
 
 .video-embed{
-    width: 768px;
-    height:432px;
+    max-width: 672px;
+    max-height:378px;
+    display: block;
     margin: 0 auto;
 }
 
