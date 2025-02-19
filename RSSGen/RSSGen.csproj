@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="OpenGraph-Net" Version="4.0.1" />
     <PackageReference Include="RssFeedGenerator" Version="1.2.1" />
   </ItemGroup>
 

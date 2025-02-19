@@ -1,4 +1,5 @@
-﻿using RssFeedGenerator;
+﻿using OpenGraphNet;
+using RssFeedGenerator;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -76,9 +77,12 @@ myRSS.channel = new rssChannel
 
 foreach (var file in fileInfos)
 {
+    var htmlString = File.ReadAllText(file.FullName);
+    OpenGraph graph = OpenGraph.ParseHtml(htmlString);
     var item = new rssChannelItem()
     {
-        title = Path.GetFileNameWithoutExtension(file.Name),
+        title = graph.Title,
+        description = graph.Metadata["og:description"].First(),
         pubDate = file.CreationTimeUtc.ToString("r"),
     };
     if (file.FullName.Contains("entries"))
