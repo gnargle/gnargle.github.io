@@ -79,11 +79,12 @@ foreach (var file in fileInfos)
 {
     var htmlString = File.ReadAllText(file.FullName);
     OpenGraph graph = OpenGraph.ParseHtml(htmlString);
+    var publishDate = DateTime.Parse(graph.Metadata["article:published_time"].First());
     var item = new rssChannelItem()
     {
         title = graph.Title,
         description = graph.Metadata["og:description"].First(),
-        pubDate = file.CreationTimeUtc.ToString("r"),
+        pubDate = publishDate.ToString("r"),
     };
     if (file.FullName.Contains("entries"))
     {
