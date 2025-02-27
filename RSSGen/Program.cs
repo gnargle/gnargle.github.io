@@ -120,10 +120,89 @@ if (File.Exists(rssPath))
     File.Delete(rssPath);
 }
 
-Console.WriteLine("RSS generated, outputting to console and file");
-Console.WriteLine(output);
+Console.WriteLine("Main RSS generated, outputting to file");
 
 File.WriteAllText(rssPath, output);
+
+Console.WriteLine("Generating hentai subseries feed");
+
+folder = FindDirectory("diversions/hentaigames");
+
+filePaths = Directory.EnumerateFiles(folder);
+fileInfos = new List<FileInfo>();
+
+if (filePaths.Any())
+{
+    foreach (var path in filePaths)
+    {
+        if (Path.GetFileNameWithoutExtension(path).Equals("template", StringComparison.InvariantCultureIgnoreCase))
+            continue;
+        if (Path.GetFileNameWithoutExtension(path).Equals("list", StringComparison.InvariantCultureIgnoreCase))
+            continue;
+        var fInfo = new FileInfo(path);
+        fileInfos.Add(fInfo);
+    }
+}
+
+fileInfos = fileInfos.OrderByDescending(f => f.CreationTimeUtc).Take(20).ToList();
+
+myRSS = new rss();
+
+myRSS.version = 2.0m;
+
+myRSS.channel = new rssChannel
+{
+    title = "athene.gay - hentai games subseries entries",
+    description = "entries in the hentai game sub-series for athene.gay",
+    language = "en-GB",
+    link = "https://athene.gay/hentaigames/list.html",
+    item = new List<rssChannelItem>(),
+    link1 = new link
+    {
+        href = "https://athene.gay/hentaigames.xml",
+        rel = "self",
+        type = "application/rss+xml",
+    }
+};
+
+foreach (var file in fileInfos)
+{
+    var htmlString = File.ReadAllText(file.FullName);
+    OpenGraph graph = OpenGraph.ParseHtml(htmlString);
+    var publishDate = DateTime.Parse(graph.Metadata["article:published_time"].First());
+    var item = new rssChannelItem()
+    {
+        title = graph.Title,
+        description = graph.Metadata["og:description"].First(),
+        pubDate = publishDate.ToString("r"),
+        link = "https://athene.gay/diversions/hentaigames/" + Path.GetFileName(file.Name)
+    };
+    item.guid = new rssChannelItemGuid()
+    {
+        isPermaLink = true,
+        Value = item.link
+    };
+    myRSS.channel.item.Add(item);
+}
+
+output = Generator.SerializeRSS(myRSS);
+
+rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../hentaigames.xml");
+
+if (!File.Exists(rssPath))
+{
+    rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../../../../hentaigames.xml");
+}
+
+if (File.Exists(rssPath))
+{
+    File.Delete(rssPath);
+}
+
+Console.WriteLine("Hentai Games RSS generated, outputting to file");
+
+File.WriteAllText(rssPath, output);
+
 
 string FindDirectory(string folderName)
 {
