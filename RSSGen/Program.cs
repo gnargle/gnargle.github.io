@@ -8,16 +8,8 @@ using System.Runtime.InteropServices;
 // See https://aka.ms/new-console-template for more information
 Console.WriteLine("Scanning entries folder for latest files");
 
-var folder = String.Empty;
+var folder = FindDirectory("entries");
 
-if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-{
-    folder = Path.Combine(Directory.GetCurrentDirectory(), "../entries");
-}
-else
-{
-    folder = Path.Combine(Directory.GetCurrentDirectory(), "../../../../entries");
-}
 var filePaths = Directory.EnumerateFiles(folder);
 var fileInfos = new List<FileInfo>();
 
@@ -34,14 +26,7 @@ if (filePaths.Any())
 
 Console.WriteLine("Scanning projects folder for latest files");
 
-if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-{
-    folder = Path.Combine(Directory.GetCurrentDirectory(), "../projects");
-}
-else
-{
-    folder = Path.Combine(Directory.GetCurrentDirectory(), "../../../../projects");
-}
+folder = FindDirectory("projects");
 
 filePaths = Directory.EnumerateFiles(folder);
 
@@ -54,7 +39,22 @@ if (filePaths.Any())
     }
 }
 
-fileInfos = fileInfos.OrderByDescending(f => f.CreationTimeUtc).Take(10).ToList();
+Console.WriteLine("Scanning diversions folder for latest files");
+
+folder = FindDirectory("diversions");
+
+filePaths = Directory.EnumerateFiles(folder);
+
+if (filePaths.Any())
+{
+    foreach (var path in filePaths)
+    {
+        var fInfo = new FileInfo(path);
+        fileInfos.Add(fInfo);
+    }
+}
+
+fileInfos = fileInfos.OrderByDescending(f => f.CreationTimeUtc).Take(20).ToList();
 
 var myRSS = new rss();
 
@@ -94,6 +94,10 @@ foreach (var file in fileInfos)
     {
         item.link = "https://athene.gay/projects/" + Path.GetFileName(file.Name);
     }
+    else if (file.FullName.Contains("diversions"))
+    {
+        item.link = "https://athene.gay/diversions/" + Path.GetFileName(file.Name);
+    }
     item.guid = new rssChannelItemGuid()
     {
         isPermaLink = true,
@@ -104,13 +108,9 @@ foreach (var file in fileInfos)
 
 var output = Generator.SerializeRSS(myRSS);
 
-var rssPath = String.Empty;
+var rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../feed.xml");
 
-if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-{
-    rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../feed.xml");
-}
-else
+if (!File.Exists(rssPath))
 {
     rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../../../../feed.xml");
 }
@@ -124,3 +124,13 @@ Console.WriteLine("RSS generated, outputting to console and file");
 Console.WriteLine(output);
 
 File.WriteAllText(rssPath, output);
+
+string FindDirectory(string folderName)
+{
+    var folder = Path.Combine(Directory.GetCurrentDirectory(), $"../{folderName}");
+    if (!Directory.Exists(folder))
+    {
+        folder = Path.Combine(Directory.GetCurrentDirectory(), $"../../../../{folderName}");
+    }
+    return folder;
+}
