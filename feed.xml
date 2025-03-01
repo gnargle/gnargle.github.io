@@ -21,12 +21,19 @@
       <guid isPermaLink="true">https://athene.gay/entries/srb2.html</guid>
     </item>
     <item>
-      <title>Youbeat</title>
-      <description>A while ago, I wanted to adapt arcade game Jubeat for home play,
-                using a device called a launchpad.</description>
-      <pubDate>Tue, 28 Jan 2025 00:00:00 GMT</pubDate>
-      <link>https://athene.gay/projects/youbeat.html</link>
-      <guid isPermaLink="true">https://athene.gay/projects/youbeat.html</guid>
+      <title>The Return of the KFC Double Down</title>
+      <description>OK this is a silly post but my friends asked me for a full
+                review of the new kfc zinger double down. So here it is.</description>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 GMT</pubDate>
+      <link>https://athene.gay/entries/thereturnofthekfcdoubledown.html</link>
+      <guid isPermaLink="true">https://athene.gay/entries/thereturnofthekfcdoubledown.html</guid>
+    </item>
+    <item>
+      <title>It's 2025 and I am playing a D&amp;D Game...</title>
+      <description>... and it's not Baldurs Gate 3; it is, however, equally 7/10.</description>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
+      <link>https://athene.gay/entries/danddgames.html</link>
+      <guid isPermaLink="true">https://athene.gay/entries/danddgames.html</guid>
     </item>
     <item>
       <title>Athene.Gay</title>
@@ -36,20 +43,12 @@
       <guid isPermaLink="true">https://athene.gay/projects/thiswebsite.html</guid>
     </item>
     <item>
-      <title>FFXIV Plugins</title>
-      <description>I currently maintain two silly little plugins for Final Fantasy
-                XIV.</description>
+      <title>Youbeat</title>
+      <description>A while ago, I wanted to adapt arcade game Jubeat for home play,
+                using a device called a launchpad.</description>
       <pubDate>Tue, 28 Jan 2025 00:00:00 GMT</pubDate>
-      <link>https://athene.gay/projects/dalamudplugins.html</link>
-      <guid isPermaLink="true">https://athene.gay/projects/dalamudplugins.html</guid>
-    </item>
-    <item>
-      <title>The Return of the KFC Double Down</title>
-      <description>OK this is a silly post but my friends asked me for a full
-                review of the new kfc zinger double down. So here it is.</description>
-      <pubDate>Wed, 12 Feb 2025 00:00:00 GMT</pubDate>
-      <link>https://athene.gay/entries/thereturnofthekfcdoubledown.html</link>
-      <guid isPermaLink="true">https://athene.gay/entries/thereturnofthekfcdoubledown.html</guid>
+      <link>https://athene.gay/projects/youbeat.html</link>
+      <guid isPermaLink="true">https://athene.gay/projects/youbeat.html</guid>
     </item>
     <item>
       <title>Miku Expo</title>
@@ -59,11 +58,12 @@
       <guid isPermaLink="true">https://athene.gay/entries/miku.html</guid>
     </item>
     <item>
-      <title>It's 2025 and I am playing a D&amp;D Game...</title>
-      <description>... and it's not Baldurs Gate 3; it is, however, equally 7/10.</description>
-      <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
-      <link>https://athene.gay/entries/danddgames.html</link>
-      <guid isPermaLink="true">https://athene.gay/entries/danddgames.html</guid>
+      <title>FFXIV Plugins</title>
+      <description>I currently maintain two silly little plugins for Final Fantasy
+                XIV.</description>
+      <pubDate>Tue, 28 Jan 2025 00:00:00 GMT</pubDate>
+      <link>https://athene.gay/projects/dalamudplugins.html</link>
+      <guid isPermaLink="true">https://athene.gay/projects/dalamudplugins.html</guid>
     </item>
     <item>
       <title>Bringing Static Websites Back</title>
