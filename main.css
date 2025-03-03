@@ -7,6 +7,16 @@
     font-family: 'Source Code Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.audio-block {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.audio-title {
+    flex: 1;
+}
+
 body {
     font-family: 'Source Code Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: bisque;
