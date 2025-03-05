@@ -170,3 +170,19 @@ ul {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+@keyframes pan {
+    from{
+        left: 0%;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+.whole-site{
+    background-image: url("img/hearts2.png");
+    background-size: 10%;
+    animation: pan 180s linear infinite;
+}
