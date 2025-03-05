@@ -19,7 +19,7 @@
 
 body {
     font-family: 'Source Code Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: bisque;
+    background-color: #ffa2b5;
     color: black;
 }
 
@@ -78,7 +78,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding-top: 10px;
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     border-radius: 25px;
 }
 
@@ -116,7 +116,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding-top: 10px;
-    background-color:blanchedalmond;
+    background-color:whitesmoke;
     border-radius: 25px;
 }
 
@@ -137,7 +137,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: beige;
+    background-color: whitesmoke;
     border-radius: 25px;
 }
 
@@ -171,18 +171,7 @@ ul {
     padding-bottom: 10px;
 }
 
-@keyframes pan {
-    from{
-        left: 0%;
-    }
-
-    to{
-        right: 100%;
-    }
-}
-
 .whole-site{
     background-image: url("img/hearts2.png");
     background-size: 10%;
-    animation: pan 180s linear infinite;
 }
