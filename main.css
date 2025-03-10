@@ -19,7 +19,6 @@
 
 body {
     font-family: 'Source Code Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffa2b5;
     color: black;
 }
 
@@ -44,6 +43,7 @@ body {
 .container {
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color:none transparent;
 }
 
 .content {
@@ -64,6 +64,7 @@ body {
     display: block;
     margin: 0 auto;
     border: 0;
+    
 }
 
 .embed-links {
@@ -174,4 +175,5 @@ ul {
 .whole-site{
     background-image: url("img/hearts2.png");
     background-size: 10%;
+    background-color: #ffa2b5;
 }
