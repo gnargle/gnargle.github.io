@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pipboy Prop Custom Apps</title>
+    <meta property="og:title" content="Pipboy Prop Custom Apps" />
+    <meta name="twitter:title" content="Pipboy Prop Custom Apps" />
+    <meta
+      name="description"
+      content="There's an official Fallout TV show prop. It's hackable."
+    />
+    <meta
+      property="og:description"
+      content="There's an official Fallout TV show prop. It's hackable."
+    />
+    <meta
+      name="twitter:description"
+      content="There's an official Fallout TV show prop. It's hackable."
+    />
+    <meta
+      property="article:published_time"
+      content="2025-03-19T00:00:00+00:00"
+    />
+    <meta
+      property="og:image"
+      content="https://athene.gay/img/projects/pipboy2.jpg"
+    />
+    <meta
+      name="twitter:image"
+      content="https://athene.gay/img/projects/pipboy2.jpg"
+    />
+    <link rel="stylesheet" href="../main.css" />
+  </head>
+  <body class="whole-site">
+    <div>
+      <iframe class="embed-title" src="../shared/title.html"> </iframe>
+      <div class="main-container">
+        <div class="main">
+          <div class="entry">
+            <a href="../index.html">Home</a>
+            <div class="title-block">
+              <a
+                class="blog-title"
+                target="_blank"
+                href="https://github.com/gnargle/pipboy-apps"
+              >
+                <h3>Pipboy Prop Custom Apps</h3>
+              </a>
+              <h3 class="datestamp">2025</h3>
+            </div>
+            <div class="content">
+              <p>There's an official Fallout TV show prop. It's hackable.</p>
+              <p>
+                OK, we're doing something a little different with this one. But
+                first the preamble.
+              </p>
+              <div class="title-block">
+                <h3 class="blog-title">The Preamble</h3>
+                <h3 class="datestamp">19/03/2025</h3>
+              </div>
+              <p>
+                So I haven't cosplayed properly in a while. I did it prettyu
+                regularly in 2023, but 2024 was a nadir for me menty h and
+                cosplay, with its ill-fitting, itchy fabrics that are not
+                designed with trans people in mind, was not gonna help that. I
+                didn't go to many cons, those I did I avoided being in cosplay,
+                yadda yadda.
+              </p>
+              <p>
+                Thing is, is I do actually really like cosplay, when I'm of the
+                frame of mind to do it. I like prop work. I like wearing the
+                clothes Cat has designed for me. It's fun when it's not autistic
+                agony.
+              </p>
+              <p>
+                You may have noticed I've got mad into Fallout of late. See the
+                previous entry on this blog. I've loved Fallout for a long time
+                but never really considered cosplay for it, not really sure why.
+              </p>
+              <p>
+                But this dive back into the series coincided well with me
+                wanting to get back into cosplay proper. And because I want to
+                do it properly, I've gone a bit all out.
+              </p>
+              <p>
+                I've ordered a reaaaalllly nice vault 33 suit, with backpack.
+                I'm gonna dye my hair instead of wearing a wig, which is the
+                worst thing sensory-wise for me in cosplay.
+              </p>
+              <p>And, I made a Pip-Boy! Look at it here, it's pretty great!</p>
+              <a href="../img/projects/pipboy-homemade.jpg">
+                <img
+                  class="blog-img-lrg"
+                  src="../img/projects/pipboy-homemade.jpg"
+                  alt="A photo of the home-made pip-boy in question. It looks pretty accurate but it is very very large."
+                />
+              </a>
+              <p>It's also <i>absolutely fucking massive.</i></p>
+              <p>
+                Wearing it is deeply uncomfortable and my arms get tired after
+                mere minutes, let alone the hours of continuous wear a con would
+                require. It's impractical.
+              </p>
+              <p>
+                There is, however, a solution. Bethesda and 'The Wand Company'
+                produce a screen-accurate version of the tv series hero prop,
+                which normally wouldn't particularly interest me, as often
+                screen-accurate props are just display pieces and are
+                non-functional.
+              </p>
+              <p>
+                Props I use for cosplay need to have flare. I use LEDs to make
+                them nicer, or in the case of my own homebrew pipboy, I was
+                using a phone with an android app that mimics the Fallout 3
+                pip-boy interface, fully interactable. That's cool! And it's a
+                showcase!
+              </p>
+              <p>
+                But luckily this prop also actually works. It features a lot of
+                animations from the tv show, but more to the point, all the
+                dials on it function and are used to interact with it. It's
+                really excellent.
+              </p>
+              <p>
+                It's expensive, though, and that alone wouldn't have been enough
+                to sway me. That is, until I did a little bit of digging and
+                discovered that
+                <a
+                  href="https://log.robco-industries.org/documentation/pipboy-3000/"
+                  >the firmware is customisable, supporting custom applications
+                  out of the box.</a
+                >
+              </p>
+              <p>
+                That's basically a red rag to a bull for me. I
+                <i>love</i> writing software for esoteric things. I mean. Look
+                at the projects on this website. Two of them use a midi device
+                and one of them is a plugin for a videogame. I've also written
+                plenty of software for and interfacing with embedded hardware.
+                This is simply made for me!
+              </p>
+              <p>
+                But if you click through the link at the top there, you'll
+                notice that there's basically nothing in the repository right
+                now. That's because, dear reader, we're gonna be exploring this
+                hardware TOGETHER. IN REAL TIME.
+              </p>
+              <p>
+                There's a sequence at the start of the social network where zuck
+                liveblogs him making facesmash. A lot of what he writes is
+                despicable, and the concept of facesmash is awful, but I dfo
+                love the idea of liveblogging a project. It's not something I
+                have really done before. So we're gonna do it with this one.
+              </p>
+              <p>
+                It's a good candidate. There's some documentation at the above
+                link, but not a lot, and there's lots left to explore in terms
+                of how the system works. The author of the above linked article
+                makes an assumption, for example - that the graphics context
+                should be one bit per pixel - but I don't think that's actually
+                the case. There are different tones in the monochrome screen,
+                and it doesn't look like they're made using dithering. So how
+                are they done? That's jsut one of many questions we will explore
+                together.
+              </p>
+              <p>
+                My ultimate aim here is to put something like the in-game stats
+                screen together. When I was setting up my homemade pip-boy, I
+                put some funny and personaly jokes into what stats and perks I
+                picked - being able to replicate them here would be really nice.
+              </p>
+              <p>
+                There's a long walk between here and there, though, so strap in.
+              </p>
+              <p>
+                However, let's get one thing straight here - I'm not a teenager
+                in a university dorm running on monster energy and rage. I'm a
+                31 year old woman with a full-time job and a bedtime.
+              </p>
+              <p>
+                So the 'liveblog' will not be me hacking away at this until 4AM,
+                oh no no. I will be working on this off and on over the next few
+                weeks most likely, and keeping this post updated as I go.
+              </p>
+              <p>
+                I am sure you will agree that this is a much healthier choice.
+              </p>
+              <div class="title-block">
+                <h3 class="blog-title">Beginnings</h3>
+                <h3 class="datestamp">19/03/2025</h3>
+              </div>
+              <p>
+                OK, so, the device itself. This is a boutique prop with
+                functionality that, while not an afterthought, is certainly not
+                economically worthy of any kind of custom silicon. This is a
+                collector's item, there's only a few thousand of them made, best
+                to use something off the shelf.
+              </p>
+              <p>
+                And, indeed, it does! An STM32 to be exact, an absolute
+                <i>classic</i> bit of IC hardware. The STM32 series are ARM
+                microcontrollers, architecturally similar to the hardware in
+                your common or garden smartphone. ARM is wonderful because it's
+                somehow managed to succeed in all 3 corners of the 'you can only
+                have two' triangle: it's [relatively] quick, it's cheap, and
+                it's Good. It also sips power relative to bigger, more
+                traditional chips, but that's true of any microcontroller,
+                really, so shouldn't really be counted as a strength here.
+              </p>
+              <p>
+                I was a smidge surprised to see an ARM chip in this - if this
+                were a homebrew project you'd expect probably an arduino, an
+                RP2040 or maybe a teensy - but this thing does have some
+                relatively complex graphics to drive.
+              </p>
+              <p>
+                I imagine the main reason this was chosen, however, was hardware
+                video decoding capability. Most (maybe all?) of the show-derived
+                animations are video files on-disk that are just decoded and
+                straight to the graphics context. You can argue this is cheating
+                if you want but to me it reeks of sensible design. Instead of
+                requiring the programmers to design and animate elegantly in a
+                very inelegant context (we'll get to that, believe me), you get
+                the raw files made for the show, re-encode them, and plonk them
+                on. Easy!
+              </p>
+              <p>
+                Additionally, the raw power the STM32 chip here has allows for a
+                less conventional (but friendlier-ish) development context. This
+                chip uses
+                <a href="https://www.espruino.com/">Espruino</a>.
+              </p>
+              <p>
+                Espruino is javascript for microcontrollers. Some of you may
+                have just hissed, and you'd be right to. Javascript is, pretty
+                infamously, horrible. It's heavy and unwieldy, it's untyped,
+                it's messy, it's functional-but-not-quite. If you want an
+                example of how not to design a programming language, you need
+                look no further than javascript. Yet because it runs in-browser,
+                it is the most common language in the world. Go figure.
+              </p>
+              <p>
+                Some of the words in that paragraph may have you convinced that
+                javascript is a bad fit for the lean, high-performance world of
+                microcontrollers, and really, you'd be right. But that hasn't
+                stopped the most insane people alive, javascript monodevelopers,
+                from crowbarring it into them anyway. And so: Espruino.
+              </p>
+              <p>
+                Cards on table, I've never used Espruino before today. I've
+                touched basically every other microcontroller going, and
+                everything else uses C++. I'm not a great C++ programmer, but I
+                can get by.
+              </p>
+              <p>
+                Comparative to my javascript, I might as well be the Bach of
+                C++. I do not like promises, I think throwing all your code to
+                'some indeterminate point in the future' is a horrendous choice,
+                but it's what we have to work with here, so we go with it.
+              </p>
+              <p>
+                The thing is though, in this case, this is actually a fairly
+                massive strength. Because Espruino is a JS interpreter, it will
+                run any valid JS you throw at it. This means you can actually
+                program it interactively from a serial connection, which is
+                pretty snazzy. Here's me throwing some debug code at it purely
+                from the terminal and seeing it display the results in real
+                time.
+              </p>
+              <a href="../img/projects/pipboy2.jpg">
+                <img
+                  class="blog-img-lrg"
+                  src="../img/projects/pipboy2.jpg"
+                  alt="A photo of the prop pip-boy displaying the word 'TEST' on its screen."
+                />
+              </a>
+              <p>
+                It <i>also</i> means we can dump the firmware with one line from
+                the terminal and, instead of being binary and unreadable, it's
+                in regular-ass javascript. Holy shit!
+              </p>
+              <a href="../img/projects/pipboyfirmwarescreenshot.png">
+                <img
+                  class="blog-img"
+                  src="../img/projects/pipboyfirmwarescreenshot.png"
+                  alt="A screenshot of some of the pip-boy firmware's built in function names."
+                />
+              </a>
+              <p>
+                As mentioned, the guy in the link above has already done this to
+                some extent, but I want to dig through a bit further and
+                understand a bit more what's going on. There's some very
+                interesting functions here that I wanna figure out.
+              </p>
+              <p>
+                For legal reasons, I can't share this firmware wholesale in the
+                repo, so you won't be able to see precisely what I'm talking
+                about. As we go, however, I'll screenshot various parts of the
+                code so you, reader, have context. Like the above!
+              </p>
+              <p>
+                Anyway, I think that's where I'm leaving it for tonight. It's
+                11pm, after all. More tomorrow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <iframe class="embed-links" src="../shared/links.html"> </iframe>
+      <iframe class="embed-footer" src="../shared/footer.html"> </iframe>
+    </div>
+  </body>
+</html>
