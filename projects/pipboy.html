@@ -412,6 +412,78 @@
                 them, and we can get one displaying.
               </p>
               <p>in fact, maybe that's what we do next. BRB...</p>
+              <b>Code Updated. Check the github link to keep up.</b>
+              <p>
+                Excellent, here's one, first hit on google.
+                <a href="https://javl.github.io/image2cpp/">image2cpp</a>
+                Let's run the Cherchez La Femme image through it. and upload it
+                to the machine aaaand...
+              </p>
+              <a href="../img/projects/pipboy/errorlowmem.png">
+                <img
+                  class="blog-img"
+                  src="../img/projects/pipboy/errorlowmem.png"
+                  alt="A screenshot of the espruino terminal reading 'New interpreter error: LOW_MEMORY,MEMORY'"
+                />
+              </a>
+              <p>
+                So, that's not good. In fairness, I am loading a 167x167 bitmap
+                into memory here, I suppose it makes sense that that wouldn't
+                exactly work. But it is going to make this more difficult.
+              </p>
+              <p>
+                Next question then. What is a reasonable maximum array size we
+                can use here? Time to experiment. We'll start with half the
+                resolution, 83x83.
+              </p>
+              <a href="../img/projects/pipboy/chercheztake1.jpg">
+                <img
+                  class="blog-img-lrg"
+                  src="../img/projects/pipboy/chercheztake1.jpg"
+                  alt="A photo of the pipboy screen showing garbage in a square."
+                />
+              </a>
+              <p>
+                OK, it's display, but that's clearly not right. Here's what it's
+                supposed to look like:
+              </p>
+              <a href="../img/projects/pipboy/CherchezLaFemme.png">
+                <img
+                  class="blog-img"
+                  src="../img/projects/pipboy/CherchezLaFemme.png"
+                  alt="The Cherchez La Femme perk icon from New Vegas"
+                />
+              </a>
+              <p>
+                That's ok though, there's options on the converter for just this
+                predicament. This was the default (Horizontal - 1bpp), and
+                Vertical - 1bpp landed similar results, so let's move on from
+                that converter and use the one hosted on
+                <a href="https://www.espruino.com/Image+Converter"
+                  >Espruino's website</a
+                >
+                instead. Man I'm really proving myself soooo smart today.
+              </p>
+              <p>
+                Using the right tool for the job gives us this! And it's even
+                full resolution! Huzzah!
+              </p>
+              <a href="../img/projects/pipboy/cherchezsuccess.jpg">
+                <img
+                  class="blog-img-lrg"
+                  src="../img/projects/pipboy/cherchezsuccess.jpg"
+                  alt="A photo of the pipboy screen showing the Cherchez La Femme icon."
+                />
+              </a>
+              <p>
+                OK, that's real, genuine progress. We can encode images and
+                display them, which we need for the perks screen. They are
+                pretty big though, so I think next order of business is going to
+                be keeping those strings in text files and loading them in when
+                we need to. Back to the docs... Although I might leave it there
+                tonight, my back hurts. No wonder Zuck had to be 19 to do this
+                live.
+              </p>
             </div>
           </div>
         </div>
