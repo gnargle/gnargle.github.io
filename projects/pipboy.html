@@ -357,6 +357,52 @@
                 So we want tio draw something to screen that isnt just text,
                 next. So I need to dive into some docs. More updates in a bit...
               </p>
+              <b>Code Updated. Check the github link to keep up.</b>
+              <p>
+                OK, first thing I want to do is draw a square. Which means we
+                need to understand how the graphics buffer is working. See,
+                right here, in the dump of the buffer of the main portion of the
+                screen, is some interesting evidence.
+              </p>
+              <a href="../img/projects/pipboy/firmwarebCbuffer.png">
+                <img
+                  class="blog-img"
+                  src="../img/projects/pipboy/firmwarebCbuffer.png"
+                  alt="A screenshot of an the graphics context in the pip boy firmware."
+                />
+              </a>
+              <p>
+                The interesting thing here is 'UInt8.' This is an array of 8bit
+                integers. This could mean the pixels are rendered as 3-byte RGB
+                values, with the r and b just ignored, or it could mean each bit
+                in the byte is a pixel, and the different tones is achieved
+                using dithering. Right now, I'm not sure!
+              </p>
+              <p>So, to find out, we're gonna draw three squares.</p>
+              <a href="../img/projects/pipboy/squares.jpg">
+                <img
+                  class="blog-img-lrg"
+                  src="../img/projects/pipboy/squares.jpg"
+                  alt="A photo of the pipboy screen showing 3 16x16 squares. One is slightly dimmer than the other two."
+                />
+              </a>
+              <p>
+                And there we have it! Three squares. Now if we look at the code
+                I've written, and note that the middle square is the dimmest of
+                the three, we can deduce...
+              </p>
+              <a href="../img/projects/pipboy/squarecode.png">
+                <img
+                  class="blog-img"
+                  src="../img/projects/pipboy/squarecode.png"
+                  alt="A screenshot of the code to make the three squares. The three are commented 'full byte pp', 'dithered square', and 'fullbright square'"
+                />
+              </a>
+              <p>
+                That I was completely wrong and the screen is compeltely
+                monochrome, and any dimming is done by dithering. I'm so glad
+                I'm liveblogging this so everyone can see how stupid I am.
+              </p>
             </div>
           </div>
         </div>
