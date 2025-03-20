@@ -23,11 +23,11 @@
     />
     <meta
       property="og:image"
-      content="https://athene.gay/img/projects/pipboy2.jpg"
+      content="https://athene.gay/img/projects/pipboy/pipboy2.jpg"
     />
     <meta
       name="twitter:image"
-      content="https://athene.gay/img/projects/pipboy2.jpg"
+      content="https://athene.gay/img/projects/pipboy/pipboy2.jpg"
     />
     <link rel="stylesheet" href="../main.css" />
   </head>
@@ -88,10 +88,10 @@
                 worst thing sensory-wise for me in cosplay.
               </p>
               <p>And, I made a Pip-Boy! Look at it here, it's pretty great!</p>
-              <a href="../img/projects/pipboy-homemade.jpg">
+              <a href="../img/projects/pipboy/pipboy-homemade.jpg">
                 <img
                   class="blog-img-lrg"
-                  src="../img/projects/pipboy-homemade.jpg"
+                  src="../img/projects/pipboy/pipboy-homemade.jpg"
                   alt="A photo of the home-made pip-boy in question. It looks pretty accurate but it is very very large."
                 />
               </a>
@@ -267,10 +267,10 @@
                 from the terminal and seeing it display the results in real
                 time.
               </p>
-              <a href="../img/projects/pipboy2.jpg">
+              <a href="../img/projects/pipboy/pipboy2.jpg">
                 <img
                   class="blog-img-lrg"
-                  src="../img/projects/pipboy2.jpg"
+                  src="../img/projects/pipboy/pipboy2.jpg"
                   alt="A photo of the prop pip-boy displaying the word 'TEST' on its screen."
                 />
               </a>
@@ -279,10 +279,10 @@
                 the terminal and, instead of being binary and unreadable, it's
                 in regular-ass javascript. Holy shit!
               </p>
-              <a href="../img/projects/pipboyfirmwarescreenshot.png">
+              <a href="../img/projects/pipboy/pipboyfirmwarescreenshot.png">
                 <img
                   class="blog-img"
-                  src="../img/projects/pipboyfirmwarescreenshot.png"
+                  src="../img/projects/pipboy/pipboyfirmwarescreenshot.png"
                   alt="A screenshot of some of the pip-boy firmware's built in function names."
                 />
               </a>
@@ -301,6 +301,61 @@
               <p>
                 Anyway, I think that's where I'm leaving it for tonight. It's
                 11pm, after all. More tomorrow.
+              </p>
+              <div class="title-block">
+                <h3 class="blog-title">Let's get some images displayed</h3>
+                <h3 class="datestamp">20/03/2025</h3>
+              </div>
+              <p>
+                OK, it's 6pm, there's 3 hours until the Apprentice is on, let's
+                get hacking. The first thing I need to do is, uh... take the
+                thing apart.
+              </p>
+              <a href="../img/projects/pipboy/pipboyopen.jpg">
+                <img
+                  class="blog-img-lrg"
+                  src="../img/projects/pipboy/pipboyopen.jpg"
+                  alt="A photo of the pipboy's arse with a ribbon cable hanging out of it."
+                />
+              </a>
+              <p>
+                That's an micro-sd extender cable stringing out of it, there.
+                Nearly everything that makes up the pip-boy is stored on an sd
+                card which is, conveniently, not bolted into the board.
+              </p>
+              <p>
+                You can open up the thing and take it out, you can copy all of
+                its files over to a folder and, most usefully for us, you can
+                copy those same files over to another, bigger sd card (the one
+                installed is only 250MB) and it works, as long as the card is
+                fat32 formatted.
+              </p>
+              <p>
+                I've put a 32GB one in there, which is overkill, but I had it
+                lying around. It also means I can put the entirety of the
+                FO3/4/NV soundtracks on there, if I want. Which, maybe, I do in
+                future! Who knows.
+              </p>
+              <p>
+                More importantly, however, that SD card has a USER/ folder where
+                we can drop our own custom javascript files and it'll display
+                them in a nice 'APPS' menu in the INV menu.
+              </p>
+              <p>
+                We're gonna start with the the helloWorld and graphicsTest files
+                that are currently in the repo. Some file wiggling and inserting
+                and removal of SD cards and bang, there they are!
+              </p>
+              <a href="../img/projects/pipboy/pipboyapps.jpg">
+                <img
+                  class="blog-img-lrg"
+                  src="../img/projects/pipboy/pipboyapps.jpg"
+                  alt="A photo of the pipboy's arse with a ribbon cable hanging out of it."
+                />
+              </a>
+              <p>
+                So we want tio draw something to screen that isnt just text,
+                next. So I need to dive into some docs. More updates in a bit...
               </p>
             </div>
           </div>
