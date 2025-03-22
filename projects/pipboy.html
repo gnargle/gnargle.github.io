@@ -748,6 +748,41 @@
                 What that isn't, though, is input. Which was the title of this
                 update (I've changed it now). So I'll tackle that next!
               </p>
+              <div class="title-block">
+                <h3 class="blog-title">Actually doing input this time</h3>
+                <h3 class="datestamp">22/03/2025</h3>
+              </div>
+              <p>
+                OK we're back again baby. And this time I sweart I am going to
+                do input. To show willing I've even already started diving into
+                the firmware to work out how it's done!
+              </p>
+              <a href="../img/projects/pipboy/firmwareInputListener.png">
+                <img class="blog-img-lrg"
+                src="../img/projects/pipboy/firmwareInputListener.png" alt="A
+                screenshot of the dumped firmware. It notably shows a function
+                'd' and a call Pip.on('knob1', d)")." />
+              </a>
+              <p>
+                So that firmware screenshot tells us all we need to know,
+                really. The Pip object has some events (in this case, 'knob1',
+                which is a) funny and b) the left hand wheel control) one which
+                you can register functions to call.
+              </p>
+              <p>
+                This screenshot is from the portion of the code that handles
+                switching between the different health animations, but this
+                applies anywhere really. So what we need to do is:
+              </p>
+              <ul>
+                <li>Create a listener and register it</li>
+                <li>
+                  Make sure we play the knob click audio like the rest of the
+                  device does
+                </li>
+                <li>Move our selection up and down the list with each click</li>
+              </ul>
+              <p>Pretty simple! OK, lets go do that.</p>
             </div>
           </div>
         </div>
