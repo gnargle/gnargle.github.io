@@ -597,7 +597,7 @@
                 implementing the manual selection now.
               </p>
               <div class="title-block">
-                <h3 class="blog-title">Time to solve input</h3>
+                <h3 class="blog-title">Chasing accuracy</h3>
                 <h3 class="datestamp">22/03/2025</h3>
               </div>
               <p>
@@ -638,9 +638,116 @@
                 <img
                   class="blog-img-lrg"
                   src="../img/projects/pipboy/halftoneselection.jpg"
-                  alt="A photo of the pipboy on the perks screen, showing the selected perk title with a grey box behind it.."
+                  alt="A photo of the pipboy on the perks screen, showing the selected perk title with a grey box behind it."
                 />
               </a>
+              <b>Code Updated. Check the github link to keep up.</b>
+              <p>
+                Ooookay, a lot has happened since I said I'd check the firmware.
+                Here's the current state of the screen:
+              </p>
+              <a href="../img/projects/pipboy/accurateLayout.jpg">
+                <img
+                  class="blog-img-lrg"
+                  src="../img/projects/pipboy/accurateLayout.jpg"
+                  alt="A photo of the pipboy on the perks screen. The perk title is now boxed with green pixels, with the text in black. The font of all text is also accurate to the game now."
+                />
+              </a>
+              <p>
+                So, like I said, I dove into the firmware code. I found quite a
+                lot of interesting stuff in there while trying to figure out how
+                they did the black on white textbox. Let's run through.
+              </p>
+              <p>
+                Top of the order - there are three foreground colours the pipboy
+                can draw in, 0-3. These are actually different brightnesses of
+                the pixels. So drawing a fullbright pixel is colour 3, an off
+                pixel is colour 0, but there's also colours 1 and 2 which are
+                slightly dimmer on colours!
+              </p>
+              <p>
+                This is how the fading 'Attachment' and 'Aid' labels at the top
+                are drawn, although it's not very clear in the photos I've
+                taken.
+              </p>
+              <p>
+                I actually discovered this by accident - I saw a setColor(0) in
+                the firmware and deduced that was black, so then I added that in
+                to my drawing code - but in so doing I also set the colour of
+                everything not black to setColor(1), which made everything
+                dimmer.
+              </p>
+              <p>
+                This was a bit of a eureka moment - I'd figured out that there
+                were roughly 4 colours displayed on screen but earlier assumed
+                this was all dithering after my experiments a few days ago.
+                Turns out I was right all along! Ha-HA!
+              </p>
+              <p>
+                So, using this new knowledge, I've added correct coloring to
+                everything. I've also chosen to dim the perk image a shade and I
+                think it makes it look really good. The full brightness was
+                overpowering some of the details of the icons.
+              </p>
+              <p>
+                While digging, I also found an interesting function call:
+                setFontMonofonto18(). This was a call on the graphgics context
+                and was pretty self-explanatory.
+              </p>
+              <p>
+                The thing is, I'd noticed my fonts were a bit off. They weren't
+                as tall as they should have been. Turns out, that's because
+                there's a custom font in use, but only when you specifically set
+                it. So because I was just using setFontVector() instead of these
+                Monofonto calls, the font was getting set back to the default
+                Espruino vector font.
+              </p>
+              <p>
+                Ctrl-F-ing 'Monofonto' in the firmware dump showed up a few
+                similar calls, listed here for convenience:
+              </p>
+              <ul>
+                <li>setFontMonofonto16</li>
+                <li>setFontMonofonto18</li>
+                <li>setFontMonofonto23</li>
+                <li>setFontMonofonto28</li>
+                <li>setFontMonofonto96</li>
+                <li>setFontMonofonto120</li>
+              </ul>
+              <p>
+                I assumed Monofonto was the font name, and tried to plug it in
+                to a few of the Espruino font functions, but got errors each
+                time, which was troubling. Giving it a quick duckduckgo
+                presented an excellent result:
+                <a href="https://www.dafont.com/monofonto.font"
+                  >DaFont Monofonto.</a
+                >
+                Turns out the font used on the pip-boy (and presumably in the
+                actual game!) is freely available to download. Perfect!
+              </p>
+              <p>
+                With that in hand, I looked at the Espruino setCustomFont call,
+                and with a smidge more docs digging I found
+                <a href="https://www.espruino.com/Font+Converter">this page</a>
+                that converts a font and size into a graphics context function
+                call - just like the ones already in the firmware!
+              </p>
+              <p>
+                This was perfect. I plugged in the font and set size to 14,
+                dropped the code in my file, and now my description is in the
+                correct font. I used the pre-existing setFontMonofonto18 for the
+                Title - 16 was proving a little too small, and other menus in
+                the device are size 18.
+              </p>
+              <p>
+                I'm honestly over the moon about this. I had kind of already
+                settled for things not looking quite right, but with a bit of
+                digging, I solved basically all the imparities with the games.
+              </p>
+              <p>
+                What that isn't, though, is input. Which was the title of this
+                update (I've changed it now). So I'll tackle that next!
+              </p>
             </div>
           </div>
         </div>
