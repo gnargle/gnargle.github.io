@@ -783,6 +783,33 @@
                 <li>Move our selection up and down the list with each click</li>
               </ul>
               <p>Pretty simple! OK, lets go do that.</p>
+              <b>Code Updated. Check the github link to keep up.</b>
+              <p>And look at that! We're done.</p>
+              <video width="672" height="378" class="video-embed" controls>
+                <source
+                  src="../img/projects/pipboy/inputWorking.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <p>
+                Nothing really special to talk about here, just some basic
+                increment/decrement handling and looping back to the start of
+                the list when necessary.
+              </p>
+              <p>
+                There is a specific wrinkle of having to deregister the input
+                event. Early on in my testing I hadn't done that and it kept the
+                .js loaded even after removing the SD card, which meant it
+                looked like any edits I made weren't actually working. In order
+                to prevent this I added gracefulClose() which deregisters the
+                handler and shows the main menu again.
+              </p>
+              <p>
+                Last thing here is really to handle what happens when we have
+                more perks than will fit in our available space. Then this
+                screen is basically done!
+              </p>
             </div>
           </div>
         </div>
