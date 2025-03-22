@@ -843,6 +843,38 @@
                 So yeah, for now, I'll leave it here. Thank you for reading and
                 following my thought processes, if you did!
               </p>
+              <b>Code Updated. Check the github link to keep up.</b>
+              <p>
+                OK I LIED one last update. I wanted to handle the selector on
+                the right moving away from INV gracefully. Until now, switching
+                this while in the app would do nothing, and to get around this I
+                had the click in of the left wheel as the 'return me to the main
+                menu' key. That's not very accurate to how it should work,
+                though.
+              </p>
+              <p>
+                So I dove into the firmware again and after a few false starts I
+                found checkMode(). This is called on a timer in all the other
+                apps every 50 milliseconds. I experimented a little with this
+                timeout in my app - 50ms made the perk list feel laggy (because
+                I'm loading data from disk so ops take a bit more time than
+                everything else in the system) so I tweaked it up to 100ms,
+                which was a nice compromise.
+              </p>
+              <p>
+                Twiddling the mode dial triggers a menu change, but I also made
+                sure to gracefully shutdown when a change was detected - this
+                includes running showMainMenu(), which if we don't do the
+                control handlers don't get registered properly. Important.
+              </p>
+              <p>
+                I also dropped in a handler for the torch button - it does
+                nothing other than shutdown and activate the torch normally.
+                While testing this I actually found a bug with the current
+                firmware - if you stay on the torch page and the time changes,
+                the footer will display over the torch screen. Neat!
+              </p>
+              <p>Anyway that is really it this time. Thanks for reading <3</p>
             </div>
           </div>
         </div>
