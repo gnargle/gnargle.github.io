@@ -96,6 +96,10 @@ body {
     padding-right: 5px;
 }
 
+.footnote {
+    font-size: 11px;
+}
+
 .header {
     max-width: 1000px;
     margin: 0 auto;
@@ -154,6 +158,34 @@ p {
     display: flex;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #ffa2b5;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    bottom: 100%;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 ul {
