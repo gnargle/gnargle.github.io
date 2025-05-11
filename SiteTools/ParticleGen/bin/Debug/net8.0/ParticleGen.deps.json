@@ -1,0 +1,80 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ParticleGen/1.0.0": {
+        "dependencies": {
+          "OpenGraph-Net": "4.0.1"
+        },
+        "runtime": {
+          "ParticleGen.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.11.43": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.43.0",
+            "fileVersion": "1.11.43.0"
+          }
+        }
+      },
+      "OpenGraph-Net/4.0.1": {
+        "dependencies": {
+          "HtmlAgilityPack": "1.11.43",
+          "System.Text.Encoding.CodePages": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/OpenGraphNet.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.1.0"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.Text.Encoding.CodePages/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ParticleGen/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HtmlAgilityPack/1.11.43": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C2gpt+S2tdFlQMOC3DK7rHZ8iv6EpDuIo4v0UTUSGX1F1bZ+NAQ3gp77HK8/JfCDszUm3Y2rHoyTp/TpO4KOIA==",
+      "path": "htmlagilitypack/1.11.43",
+      "hashPath": "htmlagilitypack.1.11.43.nupkg.sha512"
+    },
+    "OpenGraph-Net/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vaz0tc1nsbt4jLpeNq70vNc9O7v3hOklK9DZ9NCuRMrokULA8+DojgPu3+oj4J8jR0wXRqKwSm36utJKhOVuqg==",
+      "path": "opengraph-net/4.0.1",
+      "hashPath": "opengraph-net.4.0.1.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Encoding.CodePages/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
+      "path": "system.text.encoding.codepages/6.0.0",
+      "hashPath": "system.text.encoding.codepages.6.0.0.nupkg.sha512"
+    }
+  }
+}

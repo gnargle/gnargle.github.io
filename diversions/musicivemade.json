@@ -1,0 +1,27 @@
+{
+  "format": "particle",
+  "title": "Music I\u0027ve Made",
+  "content": [
+    {
+      "type": "button",
+      "label": "Home",
+      "action": "https://athene.gay/diversions/../index.json"
+    },
+    { "type": "paragraph", "text": "Music I\u0027ve Made" },
+    { "type": "paragraph", "text": "02/03/2025" },
+    {
+      "type": "paragraph",
+      "text": "I am by no means a professional, but I like to mess around with \u0027toy synths,\u0027 the kind of thing that Teenage Engineering make. That isn\u0027t the OP-1, anyway."
+    },
+    {
+      "type": "paragraph",
+      "text": "I got their EP-1320 recently and it\u0027s a delightful bit of kit in the same way their pocket operators are. Basically takes a lot of the pain and sufferring out of composing music and allows you to build up a beat from first principles. It\u0027s fun!"
+    },
+    {
+      "type": "paragraph",
+      "text": "There\u0027s not much memory on the thing tho so I\u0027m dropping \u0027done\u0027 tracks here. Maybe I\u0027ll collect them in an album if I make enough one day."
+    },
+    { "type": "paragraph", "text": "Groovin\u0027 In The Tavern" },
+    { "type": "paragraph", "text": "Consort With The Council of Elders" }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "format": "particle",
+  "title": "Bringing Static Websites Back",
+  "content": [
+    {
+      "type": "button",
+      "label": "Home",
+      "action": "https://athene.gay/entries/../index.json"
+    },
+    { "type": "paragraph", "text": "Bringing Static Websites Back" },
+    { "type": "paragraph", "text": "25/01/2025" },
+    {
+      "type": "paragraph",
+      "text": "Look I\u0027m hardly the first to do this but I think we all know the internet is shit now. Like. Really, really shit. It would be naive to say that the internet was perfect in its early days. But it was definitely less centralised, with many people maintaining their own pages, using webrings to link to people they like. It was collaborative and communicative and a platform of passions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Then for a while everyone was in the same place, although that place changed every like. year or so. I never really used MySpace or Bebo, but I got on Twitter really early and gave myself lifelong Poster\u0027s Sickness."
+    },
+    {
+      "type": "paragraph",
+      "text": "Obviously Twitter is absolute shite now and has been for a fair while. I moved to bluesky, and that\u0027s ok, but every so often I want to write longer Things. Usually about movies or games, sometimes about programming stuff since that is... my job."
+    },
+    {
+      "type": "paragraph",
+      "text": "I used backloggd for games for a bit but the culture on that site fucking annoyed me, and I don\u0027t think letterboxd is likely to be any better. So instead I can make my own website without a comment website. Then if you want to disagree with me you can dm me directly and then we can digitally kiss."
+    },
+    {
+      "type": "paragraph",
+      "text": "So yeah. Programming is my job, and because the web is stupid now, most of what I work on is in Angular or Razor. Which do have their conveniences, but also they\u0027re kind of a pain when you just want to make something simple to scratch down thoughts in."
+    },
+    {
+      "type": "paragraph",
+      "text": "Also I\u0027m pretty sure an Angular SPA would get very mad at you if you tried to put a marquee tag in it. And since marquee is the greatest tag in the history of the web, we can\u0027t have that."
+    },
+    {
+      "type": "paragraph",
+      "text": "Anyway, that\u0027s probably it for this first entry. If you wanna find me elsewhere, check the links below, else ta for now love."
+    }
+  ]
+}
