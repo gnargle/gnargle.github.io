@@ -112,6 +112,10 @@ string FindFile(string fileName)
     {
         file = Path.Combine(Directory.GetCurrentDirectory(), $"../../../../../{fileName}");
     }
+    if (!File.Exists(file))
+    {
+        file = Path.Combine(Directory.GetCurrentDirectory(), $"../../../../{fileName}");
+    }
 
     return file;
 }
@@ -122,6 +126,10 @@ string FindDirectory(string folderName)
     if (!Directory.Exists(folder))
     {
         folder = Path.Combine(Directory.GetCurrentDirectory(), $"../../../../../{folderName}");
+    }
+    if (!Directory.Exists(folder))
+    {
+        folder = Path.Combine(Directory.GetCurrentDirectory(), $"../../../../{folderName}");
     }
     return folder;
 }
