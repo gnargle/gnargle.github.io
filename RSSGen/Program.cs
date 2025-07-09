@@ -10,7 +10,7 @@ Console.WriteLine("Scanning entries folder for latest files");
 
 var folder = FindDirectory("entries");
 
-var filePaths = Directory.EnumerateFiles(folder);
+var filePaths = Directory.EnumerateFiles(folder, "*.html");
 var fileInfos = new List<FileInfo>();
 
 if (filePaths.Any())
@@ -28,7 +28,7 @@ Console.WriteLine("Scanning projects folder for latest files");
 
 folder = FindDirectory("projects");
 
-filePaths = Directory.EnumerateFiles(folder);
+filePaths = Directory.EnumerateFiles(folder, "*.html");
 
 if (filePaths.Any())
 {
@@ -43,7 +43,7 @@ Console.WriteLine("Scanning diversions folder for latest files");
 
 folder = FindDirectory("diversions");
 
-filePaths = Directory.EnumerateFiles(folder);
+filePaths = Directory.EnumerateFiles(folder, "*.html");
 
 if (filePaths.Any())
 {
@@ -128,7 +128,7 @@ Console.WriteLine("Generating hentai subseries feed");
 
 folder = FindDirectory("diversions/hentaigames");
 
-filePaths = Directory.EnumerateFiles(folder);
+filePaths = Directory.EnumerateFiles(folder, "*.html");
 fileInfos = new List<FileInfo>();
 
 if (filePaths.Any())

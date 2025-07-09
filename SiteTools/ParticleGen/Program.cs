@@ -12,7 +12,7 @@ var index = FindFile("index.html");
 fileInfos.Add(new Tuple<FileInfo, string>(new FileInfo(index), "https://athene.gay"));
 
 var folder = FindDirectory("entries");
-var filePaths = Directory.EnumerateFiles(folder);
+var filePaths = Directory.EnumerateFiles(folder, "*.html");
 if (filePaths.Any())
 {
     foreach (var path in filePaths)
@@ -24,7 +24,7 @@ if (filePaths.Any())
 }
 
 folder = FindDirectory("projects");
-filePaths = Directory.EnumerateFiles(folder);
+filePaths = Directory.EnumerateFiles(folder, "*.html");
 if (filePaths.Any())
 {
     foreach (var path in filePaths)
@@ -36,7 +36,7 @@ if (filePaths.Any())
 }
 
 folder = FindDirectory("diversions");
-filePaths = Directory.EnumerateFiles(folder);
+filePaths = Directory.EnumerateFiles(folder, "*.html");
 if (filePaths.Any())
 {
     foreach (var path in filePaths)
@@ -48,7 +48,7 @@ if (filePaths.Any())
 }
 
 folder = FindDirectory("diversions/hentaigames");
-filePaths = Directory.EnumerateFiles(folder);
+filePaths = Directory.EnumerateFiles(folder, "*.html");
 if (filePaths.Any())
 {
     foreach (var path in filePaths)
@@ -59,7 +59,7 @@ if (filePaths.Any())
     }
 }
 
-List<string> textTags = new List<string>() {"p", "h1", "h2", "h3", "h4"};
+List<string> textTags = new List<string>() { "p", "h1", "h2", "h3", "h4" };
 
 foreach (var file in fileInfos)
 {
@@ -71,7 +71,7 @@ foreach (var file in fileInfos)
         Title = doc.DocumentNode.SelectSingleNode("//title").InnerText,
         Content = new List<Content>()
     };
-    
+
     TraverseHTML(doc.DocumentNode.SelectSingleNode("//body"), particleRoot, file.Item2);
     File.WriteAllText(file.Item1.FullName.Replace(".html", ".json"), JsonSerializer.Serialize(particleRoot));
 }
@@ -107,14 +107,23 @@ void TraverseHTML(HtmlNode traversalNode, ParticleRoot particleRoot, string uriP
 
 string FindFile(string fileName)
 {
+    //this is so stupid lmao
     var file = Path.Combine(Directory.GetCurrentDirectory(), $"../{fileName}");
     if (!File.Exists(file))
     {
-        file = Path.Combine(Directory.GetCurrentDirectory(), $"../../../../../{fileName}");
+        file = Path.Combine(Directory.GetCurrentDirectory(), $"../../{fileName}");
+    }
+    if (!File.Exists(file))
+    {
+        file = Path.Combine(Directory.GetCurrentDirectory(), $"../../../{fileName}");
     }
     if (!File.Exists(file))
     {
         file = Path.Combine(Directory.GetCurrentDirectory(), $"../../../../{fileName}");
+    }
+    if (!File.Exists(file))
+    {
+        file = Path.Combine(Directory.GetCurrentDirectory(), $"../../../../../{fileName}");
     }
 
     return file;
