@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "pwK5tpF1zyE=",
+  "dgSpecHash": "dhw1sFuFsSk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gnarg\\source\\repos\\gnargle\\gnargle.github.io\\SiteTools\\ParticleGen\\ParticleGen.csproj",
+  "projectFilePath": "/home/athene/Documents/GitHub/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gnarg\\.nuget\\packages\\htmlagilitypack\\1.11.43\\htmlagilitypack.1.11.43.nupkg.sha512",
-    "C:\\Users\\gnarg\\.nuget\\packages\\opengraph-net\\4.0.1\\opengraph-net.4.0.1.nupkg.sha512",
-    "C:\\Users\\gnarg\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\gnarg\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512"
+    "/home/athene/.nuget/packages/htmlagilitypack/1.11.43/htmlagilitypack.1.11.43.nupkg.sha512",
+    "/home/athene/.nuget/packages/opengraph-net/4.0.1/opengraph-net.4.0.1.nupkg.sha512",
+    "/home/athene/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/home/athene/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
