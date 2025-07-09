@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParticleGen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30585874b9f9af32cd96d449d4a21302542b4de1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+620cb84a918d7afef79e4e6bbc762c783a7e07f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParticleGen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParticleGen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
