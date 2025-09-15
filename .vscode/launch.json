@@ -5,12 +5,28 @@
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
             // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md
-            "name": ".NET Core Launch (console)",
+            "name": "RSSGen",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/RSSGen/bin/Debug/net8.0/RSSGen.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/RSSGen",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md
+            "name": "ParticleGen",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildParticle",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/SiteTools/ParticleGen/bin/Debug/net8.0/ParticleGen.dll",
             "args": [],
             "cwd": "${workspaceFolder}/RSSGen",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
