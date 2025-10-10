@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net9.0": {
       "HtmlAgilityPack/1.11.43": {
         "type": "package",
         "compile": {
@@ -207,7 +207,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net9.0": [
       "OpenGraph-Net >= 4.0.1"
     ]
   },
@@ -217,24 +217,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/athene/Documents/GitHub/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj",
+      "projectUniqueName": "/home/athene/Documents/github/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj",
       "projectName": "ParticleGen",
-      "projectPath": "/home/athene/Documents/GitHub/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj",
+      "projectPath": "/home/athene/Documents/github/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj",
       "packagesPath": "/home/athene/.nuget/packages/",
-      "outputPath": "/home/athene/Documents/GitHub/gnargle.github.io/SiteTools/ParticleGen/obj/",
+      "outputPath": "/home/athene/Documents/github/gnargle.github.io/SiteTools/ParticleGen/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/athene/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net9.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {}
         }
       },
@@ -242,11 +242,17 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "dependencies": {
           "OpenGraph-Net": {
             "target": "Package",
@@ -269,7 +275,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.119/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
