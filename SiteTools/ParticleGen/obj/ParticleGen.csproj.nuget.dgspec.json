@@ -25,7 +25,11 @@
           "net9.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/smartr365/SmartrWeb/_packaging/Smartr365.LenderIntegrationCommon/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/smartr365/SmartrWeb/_packaging/Smartr365.OpenAPIShared/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/smartr365/_packaging/Smartr365/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
@@ -70,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
