@@ -81,8 +81,8 @@ foreach (var node in articleNodes)
     }
     item.guid = new rssChannelItemGuid()
     {
-        isPermaLink = true,
-        Value = "https://xunxar.neocities.org/"
+        isPermaLink = false,
+        Value = item.title
     };
     myRSS.channel.item.Add(item);
 }

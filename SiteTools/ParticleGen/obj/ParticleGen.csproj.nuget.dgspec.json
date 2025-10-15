@@ -1,26 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/home/athene/Documents/github/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj": {}
+    "C:\\Users\\AtheneAllen\\source\\repos\\gnargle\\gnargle.github.io\\SiteTools\\ParticleGen\\ParticleGen.csproj": {}
   },
   "projects": {
-    "/home/athene/Documents/github/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj": {
+    "C:\\Users\\AtheneAllen\\source\\repos\\gnargle\\gnargle.github.io\\SiteTools\\ParticleGen\\ParticleGen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/athene/Documents/github/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj",
+        "projectUniqueName": "C:\\Users\\AtheneAllen\\source\\repos\\gnargle\\gnargle.github.io\\SiteTools\\ParticleGen\\ParticleGen.csproj",
         "projectName": "ParticleGen",
-        "projectPath": "/home/athene/Documents/github/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj",
-        "packagesPath": "/home/athene/.nuget/packages/",
-        "outputPath": "/home/athene/Documents/github/gnargle.github.io/SiteTools/ParticleGen/obj/",
+        "projectPath": "C:\\Users\\AtheneAllen\\source\\repos\\gnargle\\gnargle.github.io\\SiteTools\\ParticleGen\\ParticleGen.csproj",
+        "packagesPath": "C:\\Users\\AtheneAllen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AtheneAllen\\source\\repos\\gnargle\\gnargle.github.io\\SiteTools\\ParticleGen\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/athene/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\AtheneAllen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/smartr365/SmartrWeb/_packaging/Smartr365.LenderIntegrationCommon/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/smartr365/SmartrWeb/_packaging/Smartr365.OpenAPIShared/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/smartr365/_packaging/Smartr365/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
@@ -65,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
