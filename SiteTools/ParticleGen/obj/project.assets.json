@@ -217,11 +217,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/athene/Documents/github/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj",
+      "projectUniqueName": "/home/athene/Documents/GitHub/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj",
       "projectName": "ParticleGen",
-      "projectPath": "/home/athene/Documents/github/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj",
+      "projectPath": "/home/athene/Documents/GitHub/gnargle.github.io/SiteTools/ParticleGen/ParticleGen.csproj",
       "packagesPath": "/home/athene/.nuget/packages/",
-      "outputPath": "/home/athene/Documents/github/gnargle.github.io/SiteTools/ParticleGen/obj/",
+      "outputPath": "/home/athene/Documents/GitHub/gnargle.github.io/SiteTools/ParticleGen/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/athene/.nuget/NuGet/NuGet.Config"
@@ -230,6 +230,7 @@
         "net9.0"
       ],
       "sources": {
+        "/usr/lib64/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -248,7 +249,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -275,7 +276,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
