@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "i3IbikCqYcI=",
+  "success": true,
+  "projectFilePath": "/home/athene/Documents/github/gnargle.github.io/SiteTools/AviaRSSGen/AviaRSSGen.csproj",
+  "expectedPackageFiles": [
+    "/home/athene/.nuget/packages/htmlagilitypack/1.12.4/htmlagilitypack.1.12.4.nupkg.sha512",
+    "/home/athene/.nuget/packages/rssfeedgenerator/1.2.1/rssfeedgenerator.1.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "AviaRSSGen/1.0.0": {
+        "dependencies": {
+          "HtmlAgilityPack": "1.12.4",
+          "RssFeedGenerator": "1.2.1"
+        },
+        "runtime": {
+          "AviaRSSGen.dll": {}
+        }
+      },
+      "HtmlAgilityPack/1.12.4": {
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.12.4.0",
+            "fileVersion": "1.12.4.0"
+          }
+        }
+      },
+      "RssFeedGenerator/1.2.1": {
+        "runtime": {
+          "lib/netstandard2.0/RssFeedGenerator.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AviaRSSGen/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HtmlAgilityPack/1.12.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ljqvBabvFwKoLniuoQKO8b5bJfJweKLs4fUNS/V5dsvpo0A8MlJqxxn9XVmP2DaskbUXty6IYaWAi1SArGIMeQ==",
+      "path": "htmlagilitypack/1.12.4",
+      "hashPath": "htmlagilitypack.1.12.4.nupkg.sha512"
+    },
+    "RssFeedGenerator/1.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Eg+Ud0wPR1HUG0WC5jFN7vGKbslBi6jMphm2zSE2fjIJkkY2qq+9Lhfpj1iuNgnGS/fH13pJuFn4QZUP+JsUkw==",
+      "path": "rssfeedgenerator/1.2.1",
+      "hashPath": "rssfeedgenerator.1.2.1.nupkg.sha512"
+    }
+  }
+}
