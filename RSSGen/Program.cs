@@ -10,6 +10,34 @@ Console.WriteLine("Scanning entries folder for latest files");
 
 var folder = FindDirectory("entries");
 
+var rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../feed.xml");
+
+if (!File.Exists(rssPath))
+{
+    rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../../../../feed.xml");
+}
+
+if (File.Exists(rssPath))
+{
+    File.Delete(rssPath);
+}
+
+var dir = Path.GetDirectoryName(rssPath);
+var entriesPath = Path.Combine(dir, "seenEntries.txt");
+
+if (!File.Exists(entriesPath))
+{
+    File.WriteAllText(entriesPath, string.Empty);
+}
+
+var lines = File.ReadAllLines(entriesPath);
+var seenEntries = new Dictionary<string, DateTime>();
+foreach (var line in lines)
+{
+    var arr = line.Split('|');
+    seenEntries.Add(arr[0], DateTime.Parse(arr[1]));
+}
+
 var filePaths = Directory.EnumerateFiles(folder, "*.html");
 var fileInfos = new List<FileInfo>();
 
@@ -80,11 +108,17 @@ foreach (var file in fileInfos)
     var htmlString = File.ReadAllText(file.FullName);
     OpenGraph graph = OpenGraph.ParseHtml(htmlString);
     var publishDate = DateTime.Parse(graph.Metadata["article:published_time"].First());
+    var pubDate = DateTime.Now;
+    if (publishDate < pubDate.Subtract(TimeSpan.FromDays(2)))
+    {
+        //preserve dates of older entries
+        pubDate = publishDate;
+    }
     var item = new rssChannelItem()
     {
         title = graph.Title,
         description = graph.Metadata["og:description"].First(),
-        pubDate = publishDate.ToString("r"),
+        pubDate = pubDate.ToString("r"),
     };
     if (file.FullName.Contains("entries"))
     {
@@ -103,22 +137,21 @@ foreach (var file in fileInfos)
         isPermaLink = true,
         Value = item.link
     };
+
+    if (seenEntries.TryGetValue(graph.Title, out var foundDate))
+    {
+        item.pubDate = foundDate.ToString("r");
+    }
+    else
+    {
+        seenEntries.Add(item.title, pubDate);
+    }
+
     myRSS.channel.item.Add(item);
 }
 
 var output = Generator.SerializeRSS(myRSS);
 
-var rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../feed.xml");
-
-if (!File.Exists(rssPath))
-{
-    rssPath = Path.Combine(Directory.GetCurrentDirectory(), "../../../../feed.xml");
-}
-
-if (File.Exists(rssPath))
-{
-    File.Delete(rssPath);
-}
 
 Console.WriteLine("Main RSS generated, outputting to file");
 
@@ -170,11 +203,17 @@ foreach (var file in fileInfos)
     var htmlString = File.ReadAllText(file.FullName);
     OpenGraph graph = OpenGraph.ParseHtml(htmlString);
     var publishDate = DateTime.Parse(graph.Metadata["article:published_time"].First());
+    var pubDate = DateTime.Now;
+    if (publishDate < pubDate.Subtract(TimeSpan.FromDays(2)))
+    {
+        //preserve dates of older entries
+        pubDate = publishDate;
+    }
     var item = new rssChannelItem()
     {
         title = graph.Title,
         description = graph.Metadata["og:description"].First(),
-        pubDate = publishDate.ToString("r"),
+        pubDate = pubDate.ToString("r"),
         link = "https://athene.gay/diversions/hentaigames/" + Path.GetFileName(file.Name)
     };
     item.guid = new rssChannelItemGuid()
@@ -182,6 +221,16 @@ foreach (var file in fileInfos)
         isPermaLink = true,
         Value = item.link
     };
+
+    if (seenEntries.TryGetValue(graph.Title, out var foundDate))
+    {
+        item.pubDate = foundDate.ToString("r");
+    }
+    else
+    {
+        seenEntries.Add(item.title, pubDate);
+    }
+
     myRSS.channel.item.Add(item);
 }
 
@@ -202,6 +251,13 @@ if (File.Exists(rssPath))
 Console.WriteLine("Hentai Games RSS generated, outputting to file");
 
 File.WriteAllText(rssPath, output);
+
+string seenEntriesString = string.Empty;
+foreach (var entry in seenEntries.Keys)
+{
+    seenEntriesString += $"{entry}|{seenEntries[entry]}\n";
+}
+File.WriteAllText(entriesPath, seenEntriesString);
 
 
 string FindDirectory(string folderName)
