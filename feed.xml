@@ -7,6 +7,13 @@
     <language>en-GB</language>
     <link href="https://athene.gay/feed.xml" rel="self" type="application/rss+xml" xmlns="http://www.w3.org/2005/Atom" />
     <item>
+      <title>The First Annual 'What Athene Played and Watched This Year' List: FILMS</title>
+      <description>Like many trannies, I keep a media list on my bluesky every year. Here's a bit more details on my favourite things from this year. First up: movies.</description>
+      <pubDate>Mon, 22 Dec 2025 18:30:00 GMT</pubDate>
+      <link>https://athene.gay/entries/2025oftheyear.html</link>
+      <guid isPermaLink="true">https://athene.gay/entries/2025oftheyear.html</guid>
+    </item>
+    <item>
       <title>For Those Who've Gone Beyond</title>
       <description>Huddled under a railway arch in Vauxhall, there's a wormhole to the 22nd century. It's like nothing else.</description>
       <pubDate>Wed, 15 Oct 2025 22:34:43 GMT</pubDate>
@@ -143,14 +150,6 @@
       <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
       <link>https://athene.gay/entries/danddgames.html</link>
       <guid isPermaLink="true">https://athene.gay/entries/danddgames.html</guid>
-    </item>
-    <item>
-      <title>Bringing Static Websites Back</title>
-      <description>Look I'm hardly the first to do this but I think we all know the
-                internet is shit now.</description>
-      <pubDate>Sat, 25 Jan 2025 00:00:00 GMT</pubDate>
-      <link>https://athene.gay/entries/1.html</link>
-      <guid isPermaLink="true">https://athene.gay/entries/1.html</guid>
     </item>
   </channel>
 </rss>
