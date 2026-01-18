@@ -7,6 +7,13 @@
     <language>en-GB</language>
     <link href="https://athene.gay/feed.xml" rel="self" type="application/rss+xml" xmlns="http://www.w3.org/2005/Atom" />
     <item>
+      <title>It's 2026 and I'm a Vriska Kinnie Now</title>
+      <description>lorem ipsum etc</description>
+      <pubDate>Sun, 18 Jan 2026 00:00:00 GMT</pubDate>
+      <link>https://athene.gay/entries/homestuck.html</link>
+      <guid isPermaLink="true">https://athene.gay/entries/homestuck.html</guid>
+    </item>
+    <item>
       <title>The First Annual 'What Athene Played and Watched This Year' List: TV SHOWS</title>
       <description>Like many trannies, I keep a media list on my bluesky every year. Here's a bit more details on my favourite things from this year. Next up: da television</description>
       <pubDate>Wed, 31 Dec 2025 18:30:00 GMT</pubDate>
@@ -142,14 +149,6 @@
       <pubDate>Thu, 30 Jan 2025 00:00:00 GMT</pubDate>
       <link>https://athene.gay/projects/thiswebsite.html</link>
       <guid isPermaLink="true">https://athene.gay/projects/thiswebsite.html</guid>
-    </item>
-    <item>
-      <title>FFXIV Plugins</title>
-      <description>I currently maintain two silly little plugins for Final Fantasy
-                XIV.</description>
-      <pubDate>Tue, 28 Jan 2025 00:00:00 GMT</pubDate>
-      <link>https://athene.gay/projects/dalamudplugins.html</link>
-      <guid isPermaLink="true">https://athene.gay/projects/dalamudplugins.html</guid>
     </item>
   </channel>
 </rss>
