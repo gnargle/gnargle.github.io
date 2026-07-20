@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "rom": "rom/rpg-quest-1.gb",
+  "rom": "rom/dragon-blazers.gb",
   "project": {
-    "name": "RPG Quest 1",
-    "author": "macbook"
+    "name": "DRAGON BLAZERS",
+    "author": "athene"
   },
   "colorCorrection": "default",
   "customControls": {
