@@ -7,6 +7,13 @@
     <language>en-GB</language>
     <link href="https://athene.gay/feed.xml" rel="self" type="application/rss+xml" xmlns="http://www.w3.org/2005/Atom" />
     <item>
+      <title>VR is back baby! It's good again! AWOOOOO!</title>
+      <description>In September, I won the metaphorical lottery, and got one of the first Steam Frames that rolled off the production line. This... is my story.</description>
+      <pubDate>Tue, 20 Oct 2026 01:00:00 GMT</pubDate>
+      <link>https://athene.gay/entries/steamframe.html</link>
+      <guid isPermaLink="true">https://athene.gay/entries/steamframe.html</guid>
+    </item>
+    <item>
       <title>It's 2026 and I'm a Vriska Kinnie Now</title>
       <description>lorem ipsum etc</description>
       <pubDate>Sun, 18 Jan 2026 00:00:00 GMT</pubDate>
@@ -142,13 +149,6 @@
       <pubDate>Tue, 28 Jan 2025 00:00:00 GMT</pubDate>
       <link>https://athene.gay/projects/youbeat.html</link>
       <guid isPermaLink="true">https://athene.gay/projects/youbeat.html</guid>
-    </item>
-    <item>
-      <title>Athene.Gay</title>
-      <description>It's the website you're looking at right now, baby!!</description>
-      <pubDate>Thu, 30 Jan 2025 00:00:00 GMT</pubDate>
-      <link>https://athene.gay/projects/thiswebsite.html</link>
-      <guid isPermaLink="true">https://athene.gay/projects/thiswebsite.html</guid>
     </item>
   </channel>
 </rss>
